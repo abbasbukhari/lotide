@@ -1,12 +1,19 @@
-const assertEqual = require("../assertEqual");
-const tail = require("../tail");
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
-// TEST CODE
-const result = tail([1, 2, 3, 4]);
-assertEqual(result.length, 3); // Expect 3 elements after removing the first one
-assertEqual(result[0], 2); // First element of tail should be 2
-assertEqual(result[1], 3); // Second element should be 3
-assertEqual(result[2], 4); // Third element should be 4
-
-const emptyResult = tail([]); 
-assertEqual(emptyResult.length, 0); 
+describe("#tail", () => {
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+  it("returns [] for [1]", () => {
+    assert.deepEqual(tail([1]), []);
+  });
+  it("returns [2, 3] for [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+  it("does not modify the original array", () => {
+    const arr = [1, 2, 3];
+    tail(arr);
+    assert.deepEqual(arr, [1, 2, 3]); // The original array should remain unchanged
+  });
+});
