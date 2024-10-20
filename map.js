@@ -11,7 +11,6 @@ const eqArrays = function (arr1, arr2) {
   return true;
 };
 
-// assertArraysEqual function to compare arrays and log result
 const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -20,7 +19,6 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-// map function that maps an array based on the callback
 const map = function (array, callback) {
   const results = [];
   for (let item of array) {
@@ -29,19 +27,15 @@ const map = function (array, callback) {
   return results;
 };
 
-// Test cases for map function
 const words = ["ground", "control", "to", "major", "tom"];
 const numbers = [1, 2, 3, 4, 5];
 const mixed = ["apple", 42, true, null];
 
-// Test: Extract the first letter of each word
 const results1 = map(words, (word) => word[0]);
 assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
 
-// Test: Multiply each number by 2
 const results2 = map(numbers, (num) => num * 2);
 assertArraysEqual(results2, [2, 4, 6, 8, 10]);
 
-// Test: Convert each item to a string
 const results3 = map(mixed, (item) => String(item));
 assertArraysEqual(results3, ["apple", "42", "true", "null"]);

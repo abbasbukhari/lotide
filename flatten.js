@@ -1,5 +1,3 @@
-// FUNCTION IMPLEMENTATION
-
 const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -20,7 +18,6 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-// flatten function implementation
 const flatten = function (array) {
   let flattenedArray = [];
   for (let element of array) {

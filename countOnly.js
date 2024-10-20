@@ -1,6 +1,5 @@
 /// countOnly.js
 
-// Assert function to check equality of values
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✔️ Assertion Passed: ${actual} === ${expected}`);
@@ -9,23 +8,20 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-// Function to count only specific items from the array
 const countOnly = function (allItems, itemsToCount) {
-  const results = {}; // Initialize an empty object to store counts
+  const results = {};
 
-  // Loop through allItems to count occurrences
   for (const item of allItems) {
-    // Only count if the item is specified in itemsToCount
     if (itemsToCount[item]) {
       if (results[item]) {
-        results[item] += 1; // Increment existing count
+        results[item] += 1;
       } else {
-        results[item] = 1; // Initialize count to 1
+        results[item] = 1;
       }
     }
   }
 
-  return results; // Return the count results
+  return results; 
 };
 
 // Test code

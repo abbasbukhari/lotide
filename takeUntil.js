@@ -1,4 +1,3 @@
-// eqArrays.js
 const eqArrays = function (arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   for (let i = 0; i < arr1.length; i++) {
@@ -7,7 +6,6 @@ const eqArrays = function (arr1, arr2) {
   return true;
 };
 
-// assertArraysEqual.js
 const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -16,19 +14,17 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-// takeUntil.js
 const takeUntil = function (array, callback) {
   const results = [];
   for (let item of array) {
     if (callback(item)) {
-      break; // Stop collecting if callback returns a truthy value
+      break; 
     }
-    results.push(item); // Add item to results if callback is falsy
+    results.push(item); 
   }
   return results;
 };
 
-// Test cases for takeUntil
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, (x) => x < 0);
 console.log(results1); // Expected Output: [ 1, 2, 5, 7, 2 ]

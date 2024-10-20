@@ -1,4 +1,3 @@
-// assertEqual.js
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -7,17 +6,15 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-// findKey.js
 const findKey = function (object, callback) {
   for (let key in object) {
     if (callback(object[key])) {
-      return key; // Return the first key where the callback returns a truthy value
+      return key;
     }
   }
-  return undefined; // If no key is found, return undefined
+  return undefined;
 };
 
-// Test cases for findKey
 const starsData = {
   "Blue Hill": { stars: 1 },
   Akaleri: { stars: 3 },

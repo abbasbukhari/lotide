@@ -7,15 +7,11 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-// countLetters function
 const countLetters = function (sentence) {
   const results = {};
 
-  // Loop through each character in the sentence
   for (const letter of sentence) {
-    // Ignore spaces
     if (letter !== " ") {
-      // Increment the count for each letter
       if (results[letter]) {
         results[letter] += 1;
       } else {

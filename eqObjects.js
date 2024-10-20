@@ -1,4 +1,3 @@
-// Function to compare two arrays for equality
 const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) return false;
   for (let i = 0; i < array1.length; i++) {
@@ -7,7 +6,6 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-// Function to assert equality of values
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -16,7 +14,6 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-// Function to compare two objects for equality
 const eqObjects = function (object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
@@ -37,7 +34,6 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
-// Tests for eqObjects function with primitive values
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
@@ -49,7 +45,6 @@ const longSleeveShirtObject = {
 };
 assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
-// Tests for eqObjects function with array values
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = {
   size: "medium",
